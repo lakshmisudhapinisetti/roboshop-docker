@@ -22,6 +22,8 @@ services:
     depends_on:
       - catalogue
       - user
+    ports:
+      -"80:80"
 
   mongodb:
     build:
