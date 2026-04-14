@@ -19,7 +19,12 @@ services:
     image: sudhapinisetti10/cart:1.0.0
     depends_on:
       - redis
-
+  shipping:
+    build:
+      context: ./shipping
+    image: sudhapinisetti10/shipping:1.0.0
+    depends_on:
+      - mysql
   frontend:
     build:
       context: ./frontend
@@ -28,6 +33,7 @@ services:
       - catalogue
       - user
       - cart
+      - shipping
     ports:
       - "80:80"
 
