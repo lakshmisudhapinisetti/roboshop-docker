@@ -38,6 +38,11 @@ services:
 
   redis:
     image: redis:7.0
+  mysql:
+    build:
+      context: ./mysql
+    image: sudhapinisetti10/mysql:1.0.0
+  
 
 networks:
   default:
