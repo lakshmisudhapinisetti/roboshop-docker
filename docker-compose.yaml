@@ -7,11 +7,10 @@ services:
     image: sudhapinisetti10/catalogue:1.0.0
     depends_on:
       - mongodb
-
-  user:
+  cart:
     build:
-      context: ./user
-    image: sudhapinisetti10/user:1.0.0
+      context: ./cart
+    image: sudhapinisetti10/cart:1.0.0
     depends_on:
       - redis
 
@@ -22,6 +21,7 @@ services:
     depends_on:
       - catalogue
       - user
+      - cart
     ports:
       - "80:80"
 
