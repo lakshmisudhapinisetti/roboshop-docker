@@ -1,14 +1,16 @@
 services:
   catalogue: 
     build:
-      dockerfile:  catalogue.Dockerfile
+      context: ./catalogue
+      dockerfile: Dockerfile
     image: sudhapinisetti10/catalogue:1.0.0
     container_name: catalogue
     depends_on:
     - mongodb
   mongodb:
     build:
-      dockerfile: mongodb.Dockerfile
+      context: ./mongodb
+      dockerfile: Dockerfile
     image:  sudhapinisetti10/mongodb:1.0.0
     container_name: mongodb
 networks:
