@@ -48,6 +48,12 @@ services:
     build:
       context: ./mysql
     image: sudhapinisetti10/mysql:1.0.0
+  rabbitmq:
+    image: rabbitmq:3
+    environment: 
+      RABBITMQ_DEFAULT_USER: roboshop
+      RABBITMQ_DEFAULT_PASS: roboshop123
+    container_name: rabbitmq
   
 
 networks:
