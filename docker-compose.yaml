@@ -8,8 +8,7 @@ services:
     - mongodb
   mongodb:
     build:
-      context: ./mongodb
-      dockerfile: Dockerfile
+      dockerfile: mongodb.Dockerfile
     image:  sudhapinisetti10/mongodb:1.0.0
     container_name: mongodb
 networks:
