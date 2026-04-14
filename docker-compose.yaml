@@ -23,7 +23,7 @@ services:
       - catalogue
       - user
     ports:
-      -"80:80"
+      - "80:80"
 
   mongodb:
     build:
