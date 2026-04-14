@@ -7,6 +7,12 @@ services:
     image: sudhapinisetti10/catalogue:1.0.0
     depends_on:
       - mongodb
+  user:
+    build : ./user
+    image: sudhapinisetti10/user:1.0.0
+    depends_on:
+      - redis
+      - mongodb
   cart:
     build:
       context: ./cart
