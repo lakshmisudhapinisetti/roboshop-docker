@@ -58,7 +58,7 @@ services:
       context: ./mongodb
     image: sudhapinisetti10/mongodb:1.0.0
     volumes:
-    - /:/data/db
+     - mongodb:/data/db
 
   redis:
     image: redis:7.0
@@ -86,7 +86,7 @@ networks:
     name: roboshop
     external: false
 volumes:
-  mongodb: # docker volume create mongodb
+  mongodb_data: # docker volume create mongodb
   redis:
   mysql:
   rabbitmq:
