@@ -86,7 +86,7 @@ networks:
     name: roboshop
     external: false
 volumes:
-  mongodb_data: # docker volume create mongodb
+  mongodb: # docker volume create mongodb
   redis:
   mysql:
   rabbitmq:
